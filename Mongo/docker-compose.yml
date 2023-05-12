@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  db:
+    image: mongo
+    # restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: kYP22XvqnqLn
+      MONGO_INITDB_DATABASE: global_configuration_test
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+    command: --auth
+
+volumes:
+  mongo_data:
+
+# mongosh --port 27017 -u mongoadmin -p kYP22XvqnqLn --authenticationDatabase global_configuration_test

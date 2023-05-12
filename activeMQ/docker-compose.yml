@@ -1,0 +1,22 @@
+version: '3'
+ 
+services:
+  activemq-1:
+    image: activemq:0.0.1
+    container_name: 'activemq-1'
+    ports:
+      - 61616:61616
+      - 8161:8161
+    volumes:
+      - ~/Documents/data/activemq/data:/data/activemq
+      - ~/Documents/data/activemq/log:/var/log/activemq
+
+  activemq-2:
+    image: activemq:0.0.1
+    container_name: 'activemq-2'
+    ports:
+      - 62626:61616
+      - 8162:8161
+    volumes:
+      - ~/Documents/data/activemq/data:/data/activemq
+      - ~/Documents/data/activemq/log:/var/log/activemq

@@ -1,0 +1,2 @@
+mongodump --host 10.126.131.250 --port 27018 --db global_configuration_test --username mongoadmin --password kYP22XvqnqLn --out /export
+mongorestore --port 27018 --username mongoadmin --password kYP22XvqnqLn ./export
